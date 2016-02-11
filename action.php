@@ -24,7 +24,7 @@ class Action
 ---\r\n
 **It appears you forgot to include your location in the title or body of your post.**\n\n
 **Please update the original post to include this information.**\n\n
-***Do NOT delete this post and create a new post with the requested information*.**\n\n
+***Do NOT delete this post - Instead, simply edit the post with the requested information.*.**\n\n
 ---\r\n
 [Report Inaccuracies Here](https://www.reddit.com/r/LocationBot/) | [GitHub] (https://github.com/ianpugh/LocationBot2.0) | [Author](https://reddit.com/u/ianp) | LocationBot v{version}\n\n
 ---\r\n
