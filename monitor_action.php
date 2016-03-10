@@ -2,19 +2,14 @@
 
 require_once('tracking.php');
 
-class MentionAction
+class MonitorAction
 {
-	public $thing_id;
-	
-	public $match_collection = array();
-	
 	private $reddit;
 	
 	private $subreddit;
 	
-	function  __construct ($post, $reddit, $db, $subreddit_rec_id)
+	function  __construct ($reddit, $db, $subreddit)
 	{
-		$this->thing_id = $db->real_escape_string($post->data->name);
 		$this->reddit = $reddit;
 		$this->db = $db;
 		$thid->subreddit = $subreddit;
@@ -54,7 +49,7 @@ class MentionAction
 		$moderator_list = array();
 		
 		// Do we have any info in the modlog?
-		$reports = $this->GetReportsLog($subreddit)
+		$reports = $this->GetReportsLog($subreddit);
 		
 		foreach ($reports[data]->children as $report)
 		{
@@ -64,7 +59,7 @@ class MentionAction
 			
 			foreach ($report->data->user_reports as $reason)
 			{
-				$query = "INSERT INTO PostReport (link_id, link_author, reason, ,url, body) VALUES ('{$report->data->name}','{$report->data->link_author}','{$reason}', '{$report->data->link_url)";
+				$query = "INSERT INTO PostReport (link_id, link_author, reason, ,url, body) VALUES ('{$report->data->name}','{$report->data->link_author}','{$reason}', '{$report->data->link_url}')";
 				$this->db->query($query);
 			}
 		}
