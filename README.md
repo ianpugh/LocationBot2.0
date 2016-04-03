@@ -4,6 +4,8 @@ LocationBot2.0 is a moderator bot that assists in the moderation of various subr
 
 The source of this bot could be forked and used as a different niche-purposed bot if desired.
 
+Pull requests encouraged!
+
 ## Code Example
 
 N/A
