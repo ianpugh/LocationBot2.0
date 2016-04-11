@@ -60,7 +60,8 @@ $location = array();
 
 while ($row = $result->fetch_assoc())
 {        
-		array_push($location, "\b({$row['name']})\b");
+		$escaped_name = preg_quote($row['name']);
+		array_push($location, "\b($escaped_name)\b");
 }
 
 // Create a regular expression based on the locations array.
